@@ -411,3 +411,90 @@ https://codepen.io/migli/pen/OQVRMw
     flex: 0 0 calc(50% - 30px);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Form Validation CSS*/
+
+
+.detail {
+	
+	font-family: Arial,Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 20px;
+	padding: 7px 8px;
+	margin: 0;
+	display: block;
+}
+
+.mess {
+	width: 450px;
+	max-width: 450px;
+	height: 280px;
+	overflow: auto;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 20px;
+	padding: 7px 8px;
+	line-height: 1em;
+	margin: 0;
+	display: block;
+}
+
+#form .row3 .label {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	width: 180px;
+}
+
+
+
+#form .row3 .label {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	width: auto;
+}
+
+
+.detail:focus {
+	background-color: #FFF;
+	border:1px solid #BD309E;
+	outline: none;
+	
+	
+}
+
+span.context {
+	color:#BD309E;
+	display: block;
+	font-style: italic;
+	background-image: url("../contact/images/x.png");
+	background-repeat: no-repeat;
+	background-position: left 6px;
+	padding-left: 35px;
+	padding-bottom: 5px;
+}

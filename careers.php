@@ -14,9 +14,17 @@
 		
 
 		echo '<h1>Career Pathways > '.$category_text.'</h1>';
+		
+		
 		echo '<img src="images/'.$category_link.'_banner.jpg" class="banner" alt="'.$category_text.' banner" style="width: 100%;"><br><br>';
+		
+		
 		echo '<p>';
+		
+		
 		include('library/career_type_descriptions/'.$category_link.'.txt');
+		
+		
 		echo '</p>';
 	
 		
@@ -31,16 +39,28 @@
 			
 		} else {
 			echo '<div class="card-deck" id="careers">';
+			
 			while($row = mysqli_fetch_array($result)){
+				
 				echo '<div class="card">'; // begins card
-					echo '<div class="card-body d-flex flex-column">';	// begins card-body
-					echo'<h5 class="card-title">'.$row['jobtitle'].'</h5>';
-					echo '<p class="card-text">';
-					echo'<b>Education:</b> '.$row['education'].'<br>';
-					echo'<b>Salary:</b> $'.$row['salary'].' or more<br>';
-					echo '<p>'.$row['jobdescription'].'</p>';
-					echo '</p>';
+				
+				echo '<div class="card-body d-flex flex-column">';	// begins card-body
+				
+				echo'<h5 class="card-title">'.$row['jobtitle'].'</h5>';
+				
+				echo '<p class="card-text">';
+				
+				echo'<b>Education:</b> '.$row['education'].'<br>';
+				
+				echo'<b>Salary:</b> $'.$row['salary'].' or more<br>';
+				
+				echo '<p>'.$row['jobdescription'].'</p>';
+				
+				echo '</p>';
+				
+				
 				echo '<a href="https://www.indeed.com/jobs?q='.str_replace(' ', '+', $row['jobtitle']).'&l=Iowa" class="btn btn-primary mt-auto">Browse local job listings</a>';
+				
 				echo '</div>'; // ends card-body
 				echo '</div>'; // ends card
 			}

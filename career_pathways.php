@@ -28,7 +28,9 @@
 <?php
 require('location: ../../library/connect.php'); 
 
-$query = "SELECT * FROM careercards";
+$query = "SELECT * FROM careercards ORDER BY RAND() LIMIT 8";
+
+//$query = "SELECT * FROM careercards";
 	
 $result = mysqli_query($connect, $query);
 
@@ -39,12 +41,13 @@ if(!$result){
 } else {
 
 	echo '<div class="card-deck" id="career_pathways">';
+	
 	while($row = mysqli_fetch_array($result)){
 	
 	$link = str_replace(' ', '_', strtolower($row['careertype']));
 
 	// Begin individual cards	
-	echo '<div class="card" style="width: 16rem;">';
+	echo '<div class="card" style="width: 18rem;">';
 
 	echo '<img class="card-img-top" src="images/'.$link.'.jpg" alt="'.$row['careertype'].'" height="200" width="300">';
   
@@ -72,17 +75,13 @@ if(!$result){
 
 
 <?php include('library/footer_section_two.inc');?>
-<?php
-IF (ISSET($_POST['submit'])) {
-	//If they used the button......
 	
-	loadCode(); // beginning of page
+
 	
-	$product_num = $_POST['product_id'];
-	buildProduct($product_num); //builds page content
 	
-	//end of page:
-	require_once('library/footer.html');
 	
-}
-?>
+	
+	
+	
+	
+
