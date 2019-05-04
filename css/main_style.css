@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Inconsolata|Kosugi|Nanum+Gothic+Coding|Oxygen+Mono');
+
+/* Styles for home page */
+
+/* Style the video: 100% width and height to cover the entire window */
+#home_video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 50%;
+  padding: 20px;
+  font-family: 'Oxygen Mono', monospace;
+  text-align: center;
+ }
+ 
+  @media (max-width: 576px) {
+	 .content {
+		 width: 100%;
+	}
+	.footer {
+		visibility: hidden;
+	}
+	
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Styles for all pages */
+
+*.page-text h1 {
+	margin: 1.5em 0 .5em 0;
+	padding-top: 10px;
+}
+
+.container {
+	background-color: #eee;
+	padding: 20px 20px;
+	border-radius: 0px 0px 10px 10px;
+	margin-bottom: 10px;
+	margin-top: 2em;
+	
+}
+
+body {
+	background-color: #1a2127;
+}
+
+/* Styles for buttons */
+.btn-primary {
+	background-color: #003b5c;
+	border: 1px solid #003b5c;
+}
+
+
+.btn-primary:hover {
+	background-color: #0071b3;
+	border: 1px solid #0071b3;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/*Styles for about page */
+aside {
+	margin-left: 1.2em;
+	display: block;
+	float: right;
+	width: 20%;
+	height: 1050px;
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+	overflow: hidden;
+}
+
+aside h6 {
+	padding: 10px;
+	text-align: center;
+}
+
+iframe {
+	float: left;
+	margin-right: 1.5em;
+}
+
+/* Style to remove the slider from browsers too small*/
+ @media (max-width: 992px) {
+    aside {
+		display: none;
+    }
+	iframe {
+		float: none;
+		width: 100%;
+	}
+}
+
+/* Styles for the logo slider */
+.participants {
+	position: relative;
+	background-color: white;
+	margin: auto;
+	overflow: hidden;
+	height: 970px;
+}
+
+.slider {
+    top: 1em;
+    position: relative;
+    box-sizing: border-box;
+    animation: slider 12s linear infinite;
+	text-align: center;
+}
+
+/* Styles for the logo slider animation */
+.slider:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slider {
+    0%   { top:   2em }
+	100% { top: -10em }
+}
+
+.participants .slider {
+  	margin: 0;
+    padding: 0 1em;
+    line-height: 1.5em;
+}
+
+/* Styles for the white blur on the top/bottom of slider */
+.blur:before, .blur::before,
+.blur:after,  .blur::after {
+    left: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: 100%; 
+    height: 2em;
+    background-image: linear-gradient(180deg, #FFF, rgba(255,255,255,0));
+}
+
+.blur:after, .blur::after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.blur:before, .blur::before {
+    top: 0;
+}
+
+/* Styles for the individual logos */
+.logo {
+	width: 175px;
+}
+
+.logo:hover {
+	animation: logo .5s forwards;
+}
+
+@keyframes logo {
+	0% {width: 175px;}
+	100% {width: 190px;}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* The styles for the nav bar */
+.navbar {
+	font-family: 'Oxygen Mono', monospace;
+	width: 100%;
+	position: fixed;
+	z-index: 5;
+	top: 0px;
+}
+
+.navbar-brand {
+	font-size: 2em;
+}
+
+.nav-item {
+	padding-left: 10px;
+}
+
+
+.nav-link {
+	font-size: 22px;
+	
+}
+
+.bg-dark {
+	background-color: #003b5c !important;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* The styles for the footer */
+.footer, .footer_two {
+	color: gray;
+	font-size: 13px;
+	padding: 1em 5em;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	text-align: center;
+	background-color: #1a2127;
+	
+}
+
+.footer {
+	position: fixed;
+}
+
+.page_end {
+	display: block;
+	background-color: #1a2127;
+	bottom: 0;
+}
+
+.footer a, .footer_two a {
+	color: silver;
+}
+
+/*Styles for contact page*/
+#message {
+height: 5em;
+}
+
+.form-col {
+}
+
+.card {
+	margin: 10px;
+/*	float: left;*/
+	
+}
+
+.row {
+	padding-bottom: 20px;
+}
+
+
+
+/*
+.row1 {
+	display: flex;
+	padding: 10px;
+	flex-wrap: wrap;
+	margin: auto;
+}
+*/
+
+/* Styles for the resources page*/
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+  }
+  
+  .tabcontent {
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,.5);
+  }
+  
+  #community, #educational {
+	  display: none;
+  }
+  
+  .tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+  }
+  
+  .tabcontent {
+	animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+  }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media (min-width: 1200px){
+	.container {
+     max-width: 1400px; 
+}
+
+}
+
+/* Styles for responsive cards for the resources page*/
+ @media (min-width: 0) {
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+	.tablinks {
+		
+	}
+	
+}
+ @media (min-width: 576px) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+ @media (min-width: 768px) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+ @media (min-width: 992px) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+ @media (min-width: 1200px) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+ }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Styles for responsive cards for the career pathways page
+https://codepen.io/migli/pen/OQVRMw
+*/
+
+ @media (min-width: 0) {
+	 #career_pathways .card {
+		 flex: 0 0 calc(100% - 30px);
+	}
+}
+ @media (min-width: 576px) {
+	 #career_pathways .card {
+		 flex: 0 0 calc(50% - 30px);
+	}
+}
+ @media (min-width: 768px) {
+	 #career_pathways .card {
+		 flex: 0 0 calc(33.3333333333% - 30px);
+	}
+}
+ @media (min-width: 992px) {
+	 #career_pathways .card {
+		 flex: 0 0 calc(25% - 30px);
+	}
+}
+ @media (min-width: 1200px) {
+	 #career_pathways .card {
+		 flex: 0 0 calc(25% - 30px);
+	}
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Styles for responsive cards for the career categories pages
+https://codepen.io/migli/pen/OQVRMw
+*/
+
+
+@media (min-width: 0) {
+  #careers .card {
+    flex: 0 0 calc(100% - 30px);
+  }
+}
+@media (min-width: 576px) {
+  #careers .card {
+    flex: 0 0 calc(100% - 30px);
+  }
+}
+@media (min-width: 768px) {
+  #careers .card {
+    flex: 0 0 calc(50% - 30px);
+  }
+}
+@media (min-width: 992px) {
+  #careers .card {
+    flex: 0 0 calc(50% - 30px);
+  }
+}
+@media (min-width: 1200px) {
+  #careers .card {
+    flex: 0 0 calc(50% - 30px);
+  }
+}
