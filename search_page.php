@@ -18,14 +18,15 @@
 //print_r($_POST);
 
 $search_item = $_POST['search_item'];
-$query = "SELECT * FROM careercards, clientrelations
+$query = "SELECT * FROM careercards
  WHERE careertype LIKE '%$search_item%' 
- OR description LIKE '%$search_item%' ";
+ OR description LIKE '%$search_item%'  ";
+	
 
 $result = mysqli_query($connect, $query);
 
 if(!$result) { 
-	echo 'Something Broke.';
+	echo 'No Search results.';
 }
 elseif (mysqli_num_rows($result) == 0 ) { 
 
@@ -33,10 +34,14 @@ elseif (mysqli_num_rows($result) == 0 ) {
 } else {
 	while ($row = mysqli_fetch_array($result)) {
 		
+		$link = str_replace(' ', '_', strtolower($row['careertype']));
+		
 	echo '<div class="card" style="width: 20rem;">';
 
-	echo '<img class="card-img-top" src="'.$row['images'].'" alt="Career Type" height="200" width="300">';
+//	echo '<img class="card-img-top" src="'.$row['images'].'" alt="Career Type" height="200" width="300">';
   
+		echo '<img class="card-img-top" src="images/'.$link.'.jpg" alt="'.$row['careertype'].'" height="200" width="300">';
+		
 	echo '<div class="card-body">';
 
     echo'<h4 class="card-title">'.$row['careertype'].'</h4>';
@@ -50,7 +55,14 @@ echo '</div>';
 	}
 }	
 
+	
 ?>
+	
+	
+	
+	
+	
+	
 
 </section><!-- This is the end of the Device search results from the kirkwood_bas database. -->
 <br>
