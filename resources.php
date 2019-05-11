@@ -7,27 +7,20 @@
 	<h1>Resources</h1>
 	<p>Here is a list of resources to aid you in your journey of exploring the local IT field. Split into three categories, career development, community, and educational, there's something here for everyone.</p>
 	</div>
-	<!-- tab links -->
 	
-	<!--
-	<div class="tab">
-		<button class="nav-link" onclick="openCategory(event, 'careerDevelopment')">Career Development</button>
-		<button class="nav-link" onclick="openCategory(event, 'community')">Community</button>
-		<button class="nav-link" onclick="openCategory(event, 'educational')">Educational</button>
-	</div>
-	<div style="clear: both;"></div>
-	-->
-	<ul class="nav nav-tabs">
+	<!-- tab links -->
+	<ul class="nav nav-tabs" id="resources-tabs">
 	  <li class="nav-item">
-		<button class="nav-link" onclick="openCategory(event, 'careerDevelopment')">Career Development</button>
+		<button class="nav-link tablinks" onclick="openCategory(event, 'careerDevelopment')">Career Development</button>
 	  </li>
 	  <li class="nav-item">
-		<button class="nav-link" onclick="openCategory(event, 'community')">Community</button>
+		<button class="nav-link tablinks" onclick="openCategory(event, 'community')">Community</button>
 	  </li>
 	  <li class="nav-item">
-		<button class="nav-link" onclick="openCategory(event, 'educational')">Educational</button>
+		<button class="nav-link tablinks" onclick="openCategory(event, 'educational')">Educational</button>
 	  </li>
 	</ul>
+	
 	
 	<!-- tab content -->
 	<!-- content for career dev -->

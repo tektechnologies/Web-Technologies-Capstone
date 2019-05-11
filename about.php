@@ -83,11 +83,11 @@
 	<div class="row">
 		<div class="col-sm">
 		<!-- this is a filler calendar image, to be filled with an actual dynamic calendar-->
-		<img src="images/calendar.jpg" width="400" height="350">
+		<img src="images/calendar.jpg" style="padding: 15px;" width="400" height="350">
 		</div>
 		<div class="col-sm">
 		<!-- this is the map widget -->
-		<div class="mapouter"><div class="gmap_canvas"><iframe width="400" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=101%2050th%20Ave%20SW%20Cedar%20Rapids%2C&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.jetzt-drucken-lassen.de">jetzt-drucken-lassen.de</a></div><style>.mapouter{text-align:right;height:350px;width:400px;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:400px;}</style>Google Maps by <a href="https://www.embedgooglemap.net" rel="nofollow" target="_blank">Embedgooglemap.net</a></div>
+		<div class="mapouter"><div class="gmap_canvas"><iframe style="padding: 10px;" width="400" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=101%2050th%20Ave%20SW%20Cedar%20Rapids%2C&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.jetzt-drucken-lassen.de">jetzt-drucken-lassen.de</a></div><style>.mapouter{text-align:right;height:350px;width:400px;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:400px;}</style>Google Maps by <a href="https://www.embedgooglemap.net" rel="nofollow" target="_blank">Embedgooglemap.net</a></div>
 		</div>
 	</div>
 	</div>

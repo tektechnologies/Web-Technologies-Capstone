@@ -124,60 +124,7 @@ var nameError = '<?php echo $error_messages['fullname']; ?>';
 <!-- Covered under creative commons license - http://dreamweavertutorial.co.uk/permissions/contact-form-permissions.htm           This site was referenced in the making of this contact form . https://www.youtube.com/watch?v=9KS2QuFXIs8-->
 <!--Main Content Starts Here!-->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-  <a class="navbar-brand" href="index.php">I AM I.T.</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	<span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	<ul class="navbar-nav mr-auto">
-	  <li class="nav-item">
-		<a class="nav-link" href="career_pathways.php">Career Pathways</a>
-	  </li>
-	  <li class="nav-item">
-		<a class="nav-link" href="about.php">About</a>
-	  </li>
-	  <li class="nav-item">
-		<a class="nav-link" href="contact.php">Contact</a>
-	  </li>
-	  <li class="nav-item">
-		<a class="nav-link" href="resources.php">Resources</a>
-	  </li>
-	</ul>
-
-<form method="post" action="search_page.php" class="form-inline my-2 my-lg-0">
-     
-	 <input name="search_item"class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-     
-	 <input class="btn btn-info my-2 my-sm-0" type="submit" value="Search">
-  
-  </form>
-
-  </div>
-
-	
-	
-</nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<?php include('library/nav_section.inc');?>
 
 
 
@@ -216,7 +163,7 @@ var nameError = '<?php echo $error_messages['fullname']; ?>';
 			 
 			
 			<div class="form-group">
-				<label class="label" for="business">Business/Organization</label>
+				<label class="label" for="business">Business/Organization*</label>
 				<input name="business" type="text" class="form-control detail" id="business" value="<?php echo isset($_POST['business'])? $_POST['business'] : ''; ?>" />
 				<?php if(in_array('business', $validation)): ?><span class="error context"><?php echo $error_messages['business']; ?></span><?php endif; ?>
 			  </div>
@@ -237,14 +184,20 @@ var nameError = '<?php echo $error_messages['fullname']; ?>';
 			  </div>
 			
 			<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="customCheck1">
-				  <label class="custom-control-label" for="customCheck1">I am not a robot</label>
+													   
+<!--				  <input type="checkbox" class="custom-control-input" id="">-->
+																			   
+					<input type="checkbox" id="recaptcha" name="recaptcha"  checked>
+				
+<!--				    <img src="images/recaptura.JPG" alt="recaptcha" height="" width="">-->
+																			   
+<!--				  <label class="custom-control-label" for="customCheck1">I am not a robot</label>-->
 				</div>
 			
 			<br>
 			
 			<div class ="submit">
-			 <input type="reset"  class="btn btn-primary" name="reset" value="Clear Form!">
+			 <input type="reset"  class="btn btn-primary" name="reset" value="Clear Form">
 			  <input type="submit" class="btn btn-primary" id="submit" value="Send Message"/>
 	</div></div>
 			
@@ -253,7 +206,7 @@ var nameError = '<?php echo $error_messages['fullname']; ?>';
 			
 			<div>	
 		<?php else: ?>
-        <p style="font-size:35px; font-family: Arial; color:#BD309E;">Thank you for your Message!</p>
+        <p style="font-size:35px;">Thank you for your Message!</p>
         <?php endif; ?>
 			
 		</div>
@@ -270,16 +223,16 @@ var nameError = '<?php echo $error_messages['fullname']; ?>';
 			<legend>Newsletter Sign-Up</legend>
 			<p>Submit your info here to be added to our email list. We'll send you updates and will never spam you. You can opt out at any time.<p>
 			<div class="form-group">
-				<label for="fullname">Name*</label>
+				<label for="fullname" style="font-weight: bold;">Name*</label>
 				<input type="text" class="form-control" name="fullname" required>
 			</div>
 			<div class="form-group">
-				<label for="email">Email address*</label>
+				<label for="email" style="font-weight: bold;">Email address*</label>
 				<input type="text" class="form-control" name="email" required>
 			</div>
 			
-			 <input type="reset"  class="btn btn-primary" name="reset" value="Clear Form!">
-			 <input type="submit" class="btn btn-primary" id="sign-up" value="Sign up!">
+			 <input type="reset"  class="btn btn-primary" name="reset" value="Clear Form">
+			 <input type="submit" class="btn btn-primary" id="sign-up" value="Sign Up">
 			
 			
 		</form>

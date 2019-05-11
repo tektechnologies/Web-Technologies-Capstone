@@ -6,7 +6,7 @@
 	<div class="container" id="main">
 	<div class="page-text">
 		<h1>Search Results</h1>
-		<p>If you have no clue where to start looking, we recommend taking one of career assessments linked on our <a href="resources.php">resources</a> page. These only take a few minutes of answering questions. Based on who you are as a person, they'll recommend job categories specifically catered to you! Although you ultimately know yourself best, this can help you to narrow down your options a bit, especially when you're just beginning your search.</p>
+		<p>Here are the search results we found for your search query:</p>
 	</div>
 		
 		
@@ -32,6 +32,7 @@ elseif (mysqli_num_rows($result) == 0 ) {
 
 		echo 'No Results in Search.';
 } else {
+	echo '<div class="card-deck" id="career_pathways">';
 	while ($row = mysqli_fetch_array($result)) {
 		
 		$link = str_replace(' ', '_', strtolower($row['careertype']));
@@ -53,6 +54,7 @@ elseif (mysqli_num_rows($result) == 0 ) {
 echo '</div>';
 echo '</div>';
 	}
+	echo '</div>';
 }	
 
 	

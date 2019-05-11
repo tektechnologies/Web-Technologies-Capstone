@@ -17,6 +17,6 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/resources.js"></script>
 	
-	
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 </head>
